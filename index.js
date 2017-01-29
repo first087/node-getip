@@ -1,12 +1,12 @@
-var express = require('express');
-var ipGetter = require('./getIP');
-var PORT = 3000;
-	
-var app = express();
+const express = require('express');
+const ipGetter = require('./getIP');
+const PORT = 3000;
+
+const app = express();
 app.get('/', function (req, res) {
-	  var ip = ipGetter.getServerIp();
-	  res.send('Hello, world! My IP = ' + ip + "\n");
+    const ip = ipGetter.getServerIp();
+    res.send('Hello, world! My IP = ' + ip);
 });
-	
+
 app.listen(PORT);
 console.log('Running on http://localhost:' + PORT);
