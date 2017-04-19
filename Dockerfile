@@ -1,4 +1,4 @@
-FROM node:7.4.0-alpine
+FROM node:7.9.0-alpine
 MAINTAINER Artit Kiuwilai "first087@gmail.com"
 
 ADD . /node-getip
