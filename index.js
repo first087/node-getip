@@ -4,9 +4,10 @@ const PORT = 3000
 
 const app = express()
 
+const devName = 'Your name' // Change to your name
+
 app.get('/', (req, res) => {
-    const ip = ipGetter.getServerIp()
-    res.send('Hello, world! My IP = ' + ip)
+    res.send(`${devName}'s container IP = ${ipGetter.getServerIp()}`)
 })
 
 app.listen(PORT)
