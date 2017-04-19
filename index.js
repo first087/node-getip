@@ -7,6 +7,7 @@ const app = express()
 const devName = 'Your name' // Change to your name
 
 app.get('/', (req, res) => {
+    res.header('Content-Type', 'text/plain')
     res.send(`${devName}'s container IP = ${ipGetter.getServerIp()}`)
 })
 
